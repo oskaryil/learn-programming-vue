@@ -7,6 +7,10 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   padding: 0;
   margin: 0;
