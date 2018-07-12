@@ -11,10 +11,11 @@
           <h1 class="main-title">Learn <br>programming</h1>
           <h2 class="main-subtitle">a community driven by learning.</h2>
         </div>
-        <button id="cta-btn">Join <span class="bold">150</span> members now</button>
+          <button id="cta-btn">Join <span class="bold">150</span> members now</button>
       </div>
       <div class="right-col">
         <img id="chat-window" src="../assets/chat_window.png" alt="slack chat window" />
+        <p id="powered-by-slack">Powered by Slack</p>
       </div>
   </div>
   </div>
@@ -63,18 +64,15 @@ $breakpoints: (
   // grid-gap: 2rem;
   grid-template-rows: 1fr;
   grid-row-gap: 1rem;
-  @media (min-width: 900px) {
+  @include media('>=desktop') {
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
   }
 }
 
 .main-title {
   text-align: center;
   color: $white;
-  font-size: 5rem;
   margin-left: 2rem;
-  line-height: 5.5rem;
   margin-bottom: 1rem;
 
   @include media('>=phone', '<=tablet') {
@@ -82,8 +80,10 @@ $breakpoints: (
     line-height: 4rem;
   }
 
-  @media (min-width: 900px) {
+  @include media('>=desktop') {
     text-align: left;
+    font-size: 8rem;
+    line-height: 7rem;
   }
 }
 
@@ -93,12 +93,18 @@ $breakpoints: (
   font-size: 2rem;
   margin-left: 2rem;
 
-  @media (min-width: 900px) {
+  @include media('>=desktop') {
     text-align: left;
+    font-size: 4rem;
+    line-height: 6rem;
   }
 }
 
 .heading {
+  @include media('>=desktop') {
+    margin-top: 6rem;
+    margin-left: 4rem;
+  }
 }
 
 .left-col {
@@ -107,13 +113,17 @@ $breakpoints: (
 }
 
 .right-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: space-between;
 }
 
 #chat-window {
   width: 100%;
   // display: none;
-  @media (min-width: 900px) {
-    width: 80%;
+  @include media('>=desktop') {
+    width: 90%;
   }
 }
 
@@ -129,8 +139,12 @@ $breakpoints: (
   margin: 0 auto;
   margin-top: 2rem;
 
-  @media (min-width: 900px) {
-    margin-left: 2rem;
+  @include media('>=desktop') {
+    font-size: 2.5rem;
+    height: 10rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
+    width: 40rem;
   }
 }
 
@@ -139,7 +153,7 @@ $breakpoints: (
 }
 
 #nav {
-  padding: 30px;
+  padding: 3rem;
   font-weight: bold;
   text-align: right;
   a {
@@ -150,5 +164,12 @@ $breakpoints: (
       color: #42b983;
     }
   }
+}
+
+#powered-by-slack {
+  align-self: flex-end;
+  color: $white;
+  font-size: 2rem;
+  margin-right: 2rem;
 }
 </style>

@@ -9,12 +9,14 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif;
+  height: 100%;
 }
 
 h1,
