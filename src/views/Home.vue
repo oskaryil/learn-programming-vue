@@ -2,35 +2,41 @@
   <div class="wrapper">
     <div class="nav">
       <nav id="nav">
+        <nav id="nav">
         <router-link to="/about">About</router-link>
+        <span style="margin-right: 20px" ></span>
+        <router-link to="/">Home</router-link>
+      </nav>
       </nav>
     </div>
-    <div class="two-columns">
-      <div class="left-col">
+    <div>
+      <div>
+        <img class="slack-logo" src="../assets/slack-icon.png" alt="slack-logo">
         <div class="heading">
-          <h1 class="main-title">Learn <br>programming</h1>
-          <h2 class="main-subtitle">a community driven by learning.</h2>
+          <h1 class="main-title">Learn programming</h1>
+          <h2 class="main-subtitle">Join a community driven slack-channel and learn programming from community of rral people. Learn, discuss and connect. Join now.</h2>
         </div>
-          <button id="cta-btn">Join <span class="bold">150</span> members now</button>
+        <p class="main-paragraph" >Already have an account? <a target="_blank" href="https://learn-programming.slack.com/">Sign in here</a></p>
+          <a target="_blank" href="https://learn-programming.slack.com/"><button id="cta-btn">Join <span class="bold">150+</span> members now</button></a>
       </div>
-      <div class="right-col">
+      <!-- <div class="right-col">
         <img id="chat-window" src="../assets/chat_window.png" alt="slack chat window" />
         <p id="powered-by-slack">Powered by Slack</p>
-      </div>
+      </div> -->
   </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'home',
+  name: "home",
   components: {}
 };
 </script>
 
 <style lang="scss">
-@import '../assets/_include-media.scss';
-$purple: #6a5acd;
+@import "../assets/_include-media.scss";
+$purple: #251d35;
 $white: #fff;
 $btn-green: #66bb42;
 
@@ -40,71 +46,70 @@ $breakpoints: (
   desktop: 1024px
 );
 
+.slack-logo {
+  width: 130px;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
   height: 100%;
   background-color: $purple;
-  // grid-auto-rows: auto;
-  // grid-gap: 2rem;
+
   @media (min-width: 900px) {
     height: 100vh;
   }
 }
 
 .nav {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.two-columns {
-  display: grid;
-  grid-template-columns: 1fr;
-  // grid-auto-rows: auto;
-  // grid-gap: 2rem;
-  grid-template-rows: 1fr;
-  grid-row-gap: 1rem;
-  @include media('>=desktop') {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
 }
 
 .main-title {
-  text-align: center;
+  text-align: center !important;
+  font-weight: bolder;
   color: $white;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 4em !important;
+  width: 100%;
+  display: block;
 
-  @include media('>=phone', '<=tablet') {
+  @include media(">=phone", "<=tablet") {
     font-size: 3rem;
-    line-height: 4rem;
-  }
-
-  @include media('>=desktop') {
-    text-align: left;
-    font-size: 8rem;
-    line-height: 7rem;
   }
 }
 
 .main-subtitle {
-  text-align: center;
+  font-weight: normal;
+  width: 50%;
+  line-height: 28px;
   color: $white;
-  font-size: 2rem;
-  margin-left: 2rem;
+  font-size: 1.75em;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  opacity: 0.7;
 
-  @include media('>=desktop') {
-    text-align: left;
-    font-size: 4rem;
-    line-height: 6rem;
+  @include media(">=phone", "<=tablet") {
+    width: 90%;
+  }
+}
+
+.main-paragraph {
+  font-size: 1.5em;
+  color: $white;
+
+  a {
+    text-decoration: underline;
+    color: $white;
   }
 }
 
 .heading {
-  @include media('>=desktop') {
-    margin-top: 6rem;
-    margin-left: 4rem;
-  }
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .left-col {
@@ -121,30 +126,28 @@ $breakpoints: (
 
 #chat-window {
   width: 100%;
-  // display: none;
-  @include media('>=desktop') {
+
+  @include media(">=desktop") {
     width: 90%;
   }
 }
 
 #cta-btn {
+  cursor: pointer;
   background-color: $btn-green;
   outline: none;
   border: 0;
   color: $white;
-  height: 6rem;
-  width: 30rem;
-  font-size: 1.75rem;
-  border-radius: 10rem;
+  padding: 20px 30px 20px 30px;
+  font-size: 1.75em;
+  border-radius: 50px;
   margin: 0 auto;
   margin-top: 2rem;
+  transition: 0.2s ease-out 0s;
 
-  @include media('>=desktop') {
-    font-size: 2.5rem;
-    height: 10rem;
-    margin-left: 6rem;
-    margin-top: 2rem;
-    width: 40rem;
+  &:hover {
+    background-color: darken($btn-green, 10%);
+    transition: 0.2s ease-out 0s;
   }
 }
 
@@ -153,9 +156,9 @@ $breakpoints: (
 }
 
 #nav {
-  padding: 3rem;
+  padding: 2rem;
   font-weight: bold;
-  text-align: right;
+
   a {
     color: $white;
     font-size: 2rem;
@@ -164,12 +167,5 @@ $breakpoints: (
       color: #42b983;
     }
   }
-}
-
-#powered-by-slack {
-  align-self: flex-end;
-  color: $white;
-  font-size: 2rem;
-  margin-right: 2rem;
 }
 </style>
