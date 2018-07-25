@@ -3,9 +3,9 @@
     <div class="nav">
       <nav id="nav">
         <nav id="nav">
-        <router-link to="/about">About</router-link>
-        <span style="margin-right: 20px" ></span>
         <router-link to="/">Home</router-link>
+        <span style="margin-right: 20px" ></span>
+        <router-link to="/about">About</router-link>
       </nav>
       </nav>
     </div>
@@ -14,7 +14,7 @@
         <img class="slack-logo" src="../assets/slack-icon.png" alt="slack-logo">
         <div class="heading">
           <h1 class="main-title">Learn programming</h1>
-          <h2 class="main-subtitle">Join a community driven slack-channel and learn programming from community of rral people. Learn, discuss and connect. Join now.</h2>
+          <h2 class="main-subtitle">A slack channel dedicated to helping others learn to program. Chat with peers and mentors to learn more about programming, and have a good time. All are welcome regardless of skill level, programming language, or age! Learn, discuss and connect. Join now.</h2>
         </div>
         <p class="main-paragraph" >Already have an account? <a target="_blank" href="https://learn-programming.slack.com/">Sign in here</a></p>
           <a target="_blank" href="https://learn-programming.slack.com/"><button id="cta-btn">Join <span class="bold">150+</span> members now</button></a>
@@ -29,13 +29,13 @@
 
 <script>
 export default {
-  name: "home",
+  name: 'home',
   components: {}
 };
 </script>
 
 <style lang="scss">
-@import "../assets/_include-media.scss";
+@import '../assets/_include-media.scss';
 $purple: #251d35;
 $white: #fff;
 $btn-green: #66bb42;
@@ -75,8 +75,12 @@ $breakpoints: (
   width: 100%;
   display: block;
 
-  @include media(">=phone", "<=tablet") {
+  @include media('>=phone', '<=tablet') {
     font-size: 3rem;
+    padding: {
+      left: 4rem;
+      right: 4rem;
+    }
   }
 }
 
@@ -90,7 +94,7 @@ $breakpoints: (
   padding-bottom: 20px;
   opacity: 0.7;
 
-  @include media(">=phone", "<=tablet") {
+  @include media('>=phone', '<=tablet') {
     width: 90%;
   }
 }
@@ -127,7 +131,7 @@ $breakpoints: (
 #chat-window {
   width: 100%;
 
-  @include media(">=desktop") {
+  @include media('>=desktop') {
     width: 90%;
   }
 }
@@ -143,6 +147,7 @@ $breakpoints: (
   border-radius: 50px;
   margin: 0 auto;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   transition: 0.2s ease-out 0s;
 
   &:hover {
