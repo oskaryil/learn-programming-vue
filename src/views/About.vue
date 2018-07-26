@@ -13,7 +13,7 @@
       <div>
         <img class="slack-logo" src="../assets/slack-icon.png" alt="slack-logo">
         <div class="heading">
-          <h1 class="main-title">About Learn programming</h1>
+          <h1 class="main-title">About</h1>
           <p class="about-paragraph">A slack channel dedicated to helping others learn to program. Chat with peers and mentors to learn more about programming, and have a good time. All are welcome regardless of skill level, programming language, or age!
           We currently have members from over 10 different countries from around the world, so you'll be getting diverse opinions on matters. The goal is to help you learn, and learn right.</p>
         </div>
