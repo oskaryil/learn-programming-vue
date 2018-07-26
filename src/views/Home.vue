@@ -29,13 +29,13 @@
 
 <script>
 export default {
-  name: 'home',
+  name: "home",
   components: {}
 };
 </script>
 
 <style lang="scss">
-@import '../assets/_include-media.scss';
+@import "../assets/_include-media.scss";
 $purple: #251d35;
 $white: #fff;
 $btn-green: #66bb42;
@@ -75,7 +75,7 @@ $breakpoints: (
   width: 100%;
   display: block;
 
-  @include media('>=phone', '<=tablet') {
+  @include media(">=phone", "<=tablet") {
     font-size: 3rem;
     padding: {
       left: 4rem;
@@ -94,7 +94,7 @@ $breakpoints: (
   padding-bottom: 20px;
   opacity: 0.7;
 
-  @include media('>=phone', '<=tablet') {
+  @include media(">=phone", "<=tablet") {
     width: 90%;
   }
 }
@@ -131,7 +131,7 @@ $breakpoints: (
 #chat-window {
   width: 100%;
 
-  @include media('>=desktop') {
+  @include media(">=desktop") {
     width: 90%;
   }
 }
