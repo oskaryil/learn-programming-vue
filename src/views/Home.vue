@@ -77,10 +77,6 @@ $breakpoints: (
 
   @include media(">=phone", "<=tablet") {
     font-size: 3rem;
-    padding: {
-      left: 4rem;
-      right: 4rem;
-    }
   }
 }
 
